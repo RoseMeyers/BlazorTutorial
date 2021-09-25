@@ -1,33 +1,9 @@
-﻿@page "/IPO"
+﻿@page "/"
 
-<h1>IPO</h1>
+<h1> Hello, welcome to my first Blazor app! :)</h1>
 
-<p>Input prompt </p>
+Welcome to your new app.
 
-<input @bind="InputString " />
+<SurveyPrompt Title="How is Blazor working for you?" />
 
-<button class="btn btn-primary" @onclick="DoProcessing">Go</button>
-
-<p>Output: @OutputString </p>
-
-@code
-
-{
-
-    private string InputString { get; set; }
-
-    private string OutputString { get; set; }
-
-    private void DoProcessing()
-
-    {
-
-        double num = double.Parse(InputString);
-
-        num = num * 2;
-
-        OutputString = num.ToString();
-
-    }
-
-}>
+<Counter IncrementAmount="10" />
